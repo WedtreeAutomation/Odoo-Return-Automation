@@ -1,5 +1,4 @@
 python-dotenv
-xmlrpc-client
 pandas
 requests
 openpyxl
