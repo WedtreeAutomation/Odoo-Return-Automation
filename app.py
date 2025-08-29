@@ -755,20 +755,20 @@ def main():
 
                                 total_amount += product['unit_price'] * product['count'] * (1 - product['discount']/100)
                             
-                            with col2:
-                                # Quantity adjustment
-                                new_qty = st.number_input(
-                                    "Adjust Quantity",
-                                    min_value=1,
-                                    max_value=len(product['lots']),
-                                    value=product['count'],
-                                    key=f"qty_{idx}",
-                                    help="Adjust the quantity for this product"
-                                )
+                            # with col2:
+                            #     # Quantity adjustment
+                            #     new_qty = st.number_input(
+                            #         "Adjust Quantity",
+                            #         min_value=1,
+                            #         max_value=len(product['lots']),
+                            #         value=product['count'],
+                            #         key=f"qty_{idx}",
+                            #         help="Adjust the quantity for this product"
+                            #     )
                                 
-                                if new_qty != product['count']:
-                                    st.session_state.selected_products[idx]['count'] = new_qty
-                                    st.rerun()
+                            #     if new_qty != product['count']:
+                            #         st.session_state.selected_products[idx]['count'] = new_qty
+                            #         st.rerun()
                             
                             with col3:
                                 if st.button(f"🗑️ Remove", key=f"remove_{idx}", use_container_width=True):
